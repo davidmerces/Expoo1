@@ -18,10 +18,12 @@ public class ContaP extends ContaBancaria {
         
         float rendimento = super.getSaldo()*(float)taxa_rendimento/100;
         rendimento = rendimento + super.getSaldo();
-        System.out.println("SALDO ATUAL: R$"+super.getSaldo());
+        //System.out.println("SALDO ATUAL: R$"+super.getSaldo());
+       float qren = rendimento - super.getSaldo();
         super.setSaldo(rendimento);
-        System.out.println("SALDO COM RENDIMENO: R$"+super.getSaldo());
+        System.out.println("RENDIMENTO: R$"+qren+"\n");
     }
+
     
     
 }

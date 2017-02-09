@@ -1,4 +1,5 @@
 
+import classes.ContaE;
 import classes.ContaP;
 
 
@@ -14,7 +15,15 @@ public class Principal {
         conta1.setTaxa_rendimento(5.0);
         conta1.depositar(200);
         conta1.calcularNovoSaldo();
+        conta1.dadosCliente();
         
+        ContaE contae = new ContaE();
+        contae.setCliente("Arthur Silva");
+        contae.setNum_conta("2356-4");
+        contae.setSaldo(200);
+        contae.setLimite(100);
+        contae.sacar(250);
+        contae.dadosCliente();
     }
     
 }

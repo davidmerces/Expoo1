@@ -38,9 +38,7 @@ public class ContaBancaria {
         
         if(saldo>=valorS){
             saldo -= valorS;
-            System.out.println("RETIRE O DINHEIRO");
-            sleep(1);
-            System.out.println("SAQUE REALIZADO COM SUCESSO");
+            System.out.println("SAQUE REALIZADO COM SUCESSO\n");
         }else{
             System.out.println("SALDO INSULFICIENTE");
         }  
@@ -54,7 +52,7 @@ public class ContaBancaria {
     }
     
     public void dadosCliente(){
-        System.out.println("CLIENTE: "+cliente+"Nº");
+        System.out.println("CLIENTE: "+cliente+"\nNº DA CONTA:"+num_conta+"\nSALDO:"+saldo+"\n-------------------------------");
     }
     
 }

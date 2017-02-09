@@ -1,7 +1,6 @@
 
 package classes;
 
-import static java.lang.Thread.sleep;
 
 
 public class ContaE extends ContaBancaria {
@@ -25,12 +24,21 @@ public class ContaE extends ContaBancaria {
       float novoS=0;  
         if((super.getSaldo()+limite) >=valorS){
             novoS = (super.getSaldo()+limite)-valorS;
-            super.setSaldo(novoS);
-            System.out.println("RETIRE O DINHEIRO");
-            System.out.println("SAQUE REALIZADO COM SUCESSO\n   LIMITE DISPONIVEL: "+novoS);
+            if(super.getSaldo()- valorS < 0)
+                super.setSaldo(0);
+            System.out.println("SAQUE REALIZADO COM SUCESSO\nLIMITE DISPONIVEL: "+novoS+"\n");
             limite = novoS;
         }else{
             System.out.println("SALDO INSULFICIENTE");
         }  
     }
+    
+    /**
+     *
+     */
+    @Override
+     public void dadosCliente(){
+        System.out.println("CLIENTE: "+super.getCliente()+"\nNº DA CONTA:"+super.getNum_conta()+"\nSALDO COM LIMITE:R$ "+limite+"");
+
+     }
 }
