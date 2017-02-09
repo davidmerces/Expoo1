@@ -11,7 +11,6 @@ public class Principal {
         ContaP conta1 = new ContaP();
         conta1.setCliente("David Silva");
         conta1.setNum_conta("0325-9");
-        conta1.setSaldo(50);
         conta1.setTaxa_rendimento(5.0);
         conta1.depositar(200);
         conta1.calcularNovoSaldo();
@@ -20,7 +19,7 @@ public class Principal {
         ContaE contae = new ContaE();
         contae.setCliente("Arthur Silva");
         contae.setNum_conta("2356-4");
-        contae.setSaldo(200);
+        contae.depositar(200);
         contae.setLimite(100);
         contae.sacar(250);
         contae.dadosCliente();

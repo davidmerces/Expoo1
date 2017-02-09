@@ -1,7 +1,6 @@
 
 package classes;
 
-import static java.lang.Thread.sleep;
 
 
 public class ContaBancaria {

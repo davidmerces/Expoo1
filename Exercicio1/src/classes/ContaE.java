@@ -21,12 +21,13 @@ public class ContaE extends ContaBancaria {
      */
     @Override
     public void sacar(float valorS){
-      float novoS=0;  
+      float novoS=0;
+      System.out.println("SALDO COM LIMITE:R$ "+(super.getSaldo()+limite));
         if((super.getSaldo()+limite) >=valorS){
             novoS = (super.getSaldo()+limite)-valorS;
             if(super.getSaldo()- valorS < 0)
                 super.setSaldo(0);
-            System.out.println("SAQUE REALIZADO COM SUCESSO\nLIMITE DISPONIVEL: "+novoS+"\n");
+            System.out.println("SAQUE REALIZADO COM SUCESSO\n");
             limite = novoS;
         }else{
             System.out.println("SALDO INSULFICIENTE");
